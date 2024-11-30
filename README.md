@@ -18,3 +18,6 @@ This is a **Streamlit application** that helps distribute a total score into ran
 ### Steps
 1. Clone this repository:
 2. Run `start.py`
+
+### Screen shot
+![image](https://github.com/user-attachments/assets/dd5059c4-5ee7-4057-a8ca-fe7787148b7c)
