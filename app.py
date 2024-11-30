@@ -84,13 +84,11 @@ st.subheader("Mark")
 
 pasted_text = st.text_area(label='Paste the values here')
 
-if pasted_text:
+if pasted_text or st.button('Generate'):
     marks = [int(line.strip()) for line in pasted_text.splitlines() if line.strip()]
     st.write(f"Count: {len(marks)}")
 
-
-if st.button('Generate'):
-
     master_sheet = [random_partition(mark, paper(question_values)) for mark in marks]
     df = pd.DataFrame(master_sheet, columns=paper(question_values, header=True)+['Sum'])
+    df = df.replace(0, '')
     st.dataframe(df)
