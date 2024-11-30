@@ -73,7 +73,7 @@ for i in range(n):
 
     value[0] = left.number_input("Mark", step=1, min_value=1, key=f"left-{i}")
     value[1] = middle.number_input("No. of question", step=1, min_value=1, key=f"middle-{i}")
-    value[2] = right.number_input("Choice", step=1, key=f"right-{i}")
+    value[2] = right.number_input("Choice", step=1, min_value=1, key=f"right-{i}")
 
     total_mark += value[0]*value[1]
     question_values.append(value)
